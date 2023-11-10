@@ -1,29 +1,19 @@
-import {
-  AfterViewInit,
-  Component,
-  ContentChild,
-  ElementRef,
-  OnInit, Signal, signal,
-  TemplateRef,
-  ViewChild,
-  WritableSignal
-} from '@angular/core';
+import {Component, computed} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {fromEvent, map, Observable, tap} from "rxjs";
-import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
-import {Point} from "@angular/cdk/drag-drop";
+import {fromEvent, map, Observable} from "rxjs";
 import {toSignal} from "@angular/core/rxjs-interop";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-signal-form',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatButtonModule],
   templateUrl: './signal-form.component.html',
   styleUrl: './signal-form.component.scss'
 })
 export class SignalFormComponent {
 
-  private clicked$: Observable<{ x: number, y:number }> = fromEvent<PointerEvent>(document, 'click').pipe(
+  private clicked$: Observable<{ x: number, y: number }> = fromEvent<PointerEvent>(document, 'click').pipe(
     map(a => ({x: a.x, y: a.y}))
   )
 
@@ -32,7 +22,12 @@ export class SignalFormComponent {
     {initialValue: null}
   )
 
+  public wasClickInTopRightCorner = computed(() => {
+    const windowHeightMiddle = window.innerHeight / 2
+    const windowWidthMiddle = window.innerWidth / 2
 
-
+    const lastClick = this.lastClick()
+    return !!(lastClick && lastClick.x > windowWidthMiddle && lastClick.y < windowHeightMiddle);
+  })
 
 }
