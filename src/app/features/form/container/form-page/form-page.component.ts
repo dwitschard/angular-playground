@@ -1,15 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {
-  ActivatedRoute,
-  ActivatedRouteSnapshot,
-  RouterLink,
-  RouterLinkActive,
-  RouterModule,
-  RouterOutlet
-} from "@angular/router";
+import {ActivatedRoute, NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {MatTabsModule} from "@angular/material/tabs";
 import {Link} from "../../../../shared/components/header/header.component";
+import {filter} from "rxjs";
 
 @Component({
   standalone: true,
@@ -17,25 +11,21 @@ import {Link} from "../../../../shared/components/header/header.component";
   templateUrl: './form-page.component.html',
   styleUrls: ['./form-page.component.scss']
 })
-export class FormPageComponent implements OnInit {
+export class FormPageComponent {
 
   public links: Link[] = [
-    {text: 'Basic Form', url: './basic'},
-    {text: 'Reactive Form', url: './reactive'}
+    {text: 'Basic Form', url: 'basic'},
+    {text: 'Reactive Form', url: 'reactive'}
   ]
 
   public activeLink: Link = this.links[0];
 
+  constructor(private activeRoute: ActivatedRoute, private router: Router) {
 
-  constructor(private activeRoute: ActivatedRoute) {
-  }
-
-  ngOnInit(): void {
-    console.log(this.activeRoute.snapshot);
-    const currentSelection = this.links.find(link => this.activeRoute.snapshot.url.toString().includes(link.url))
-    console.log(currentSelection)
-    if (currentSelection) {
-      this.activeLink = currentSelection
-    }
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+          this.activeLink = this.links.find(link => this.router.url.includes(link.url)) ?? this.links[0]
+        }
+      );
   }
 }

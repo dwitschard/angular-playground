@@ -4,7 +4,7 @@
 <nav mat-tab-nav-bar [tabPanel]="tabPanel">
   <a mat-tab-link *ngFor="let link of links"
      [routerLink]="link.url"
-     [routerLinkActive]="activeLink?.url ?? ''"
+     [routerLinkActive]="activeLink.url"
      [active]="activeLink == link"
      (click)="activeLink = link"
   >
