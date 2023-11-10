@@ -1,11 +1,31 @@
 .container {
+  min-height: 60vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  grid-template-rows: 1fr 1fr;
+
+  grid-template-areas:
+    "topLeft topRight"
+    "bottomLeft bottomRight"
+  ;
 }
 
-.click-area {
-  height: 200px;
-  background-color: lightgray;
-  border: 1px solid gray;
+.topLeft {
+  grid-area: topLeft;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+
+  background-color: #adbbe6;
+}
+
+.topRight {
+  grid-area: topRight;
+}
+
+.bottomLeft {
+  grid-area: bottomLeft;
+}
+
+.bottomRight {
+  grid-area: bottomRight;
 }
