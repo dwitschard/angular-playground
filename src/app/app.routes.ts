@@ -12,8 +12,8 @@ export const APP_ROUTES: Route[] = [
     component: WelcomePageComponent
   },
   {
-    path: 'form',
-    loadChildren: () => import('./features/form/form.routes').then(mod => mod.FORM_ROUTES)
+    path: 'tech',
+    loadChildren: () => import('./features/tech/technical.routes').then(mod => mod.TECH_ROUTES)
   },
   {
     path: 'user',

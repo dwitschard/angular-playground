@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 import {FormBuilder, FormGroup, FormGroupDirective, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
-import {FormData} from "../../model/form-data.model";
-import {FormDataViewerComponent} from "../form-data-viewer/form-data-viewer.component";
+import {FormDataViewerComponent} from "../../../../shared/components/form-data-viewer/form-data-viewer.component";
+import {FormData} from "../../../../shared/model/form-data.model";
 
 @Component({
   selector: 'app-basic-form',
   standalone: true,
   imports: [CommonModule, MatInputModule, MatButtonModule, ReactiveFormsModule, FormDataViewerComponent],
-  templateUrl: './basic-form.component.html',
-  styleUrls: ['./basic-form.component.scss']
+  templateUrl: './control-flow.component.html',
+  styleUrls: ['./control-flow.component.scss']
 })
-export class BasicFormComponent {
+export class ControlFlowComponent {
 
   public showData: WritableSignal<boolean> = signal(false)
   public data: WritableSignal<FormData[]> = signal([])

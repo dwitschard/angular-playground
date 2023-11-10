@@ -23,7 +23,7 @@ import {FooterComponent} from "./shared/components/footer/footer.component";
 export class AppComponent {
 
   public applicationLinks: Link[] = [
-    {text: "Form", url: './form'},
+    {text: "Technical", url: './tech'},
     {text: "User", url: './user'},
   ]
 }

@@ -8,10 +8,10 @@ import {MatButtonModule} from "@angular/material/button";
   selector: 'app-signal-form',
   standalone: true,
   imports: [CommonModule, MatButtonModule],
-  templateUrl: './signal-form.component.html',
-  styleUrl: './signal-form.component.scss'
+  templateUrl: './signals.component.html',
+  styleUrl: './signals.component.scss'
 })
-export class SignalFormComponent {
+export class SignalsComponent {
 
   private clicked$: Observable<{ x: number, y: number }> = fromEvent<PointerEvent>(document, 'click').pipe(
     map(a => ({x: a.x, y: a.y}))

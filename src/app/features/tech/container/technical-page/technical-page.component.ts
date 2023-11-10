@@ -8,13 +8,13 @@ import {filter} from "rxjs";
 @Component({
   standalone: true,
   imports: [CommonModule, RouterOutlet, MatTabsModule, RouterLink, RouterLinkActive],
-  templateUrl: './form-page.component.html',
-  styleUrls: ['./form-page.component.scss']
+  templateUrl: './technical-page.component.html',
+  styleUrls: ['./technical-page.component.scss']
 })
-export class FormPageComponent {
+export class TechnicalPageComponent {
 
   public links: Link[] = [
-    {text: 'Basic Form', url: 'basic'},
+    {text: 'Control Flow', url: 'control-flow'},
     {text: 'Signals', url: 'signal'},
   ]
 
