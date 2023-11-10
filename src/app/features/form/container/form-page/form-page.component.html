@@ -1,0 +1,18 @@
+<h1>Submitting a Form</h1>
+
+
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a mat-tab-link *ngFor="let link of links"
+     [routerLink]="link.url"
+     [routerLinkActive]="activeLink?.url ?? ''"
+     [active]="activeLink == link"
+     (click)="activeLink = link"
+  >
+  {{link.text}}
+  </a>
+  <a mat-tab-link disabled>Disabled Link</a>
+</nav>
+<mat-tab-nav-panel #tabPanel>
+  <p>Hi there</p>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>

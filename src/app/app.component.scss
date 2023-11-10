@@ -1,0 +1,22 @@
+.app-container {
+  display: grid;
+  min-height: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+            "app_header"
+            "router_outlet"
+            "app_footer"
+}
+
+.header {
+  grid-area: app_header;
+}
+
+.router-outlet {
+  grid-area: router_outlet;
+  padding-left: 2rem
+}
+
+.footer {
+  grid-area: app_footer;
+}

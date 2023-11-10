@@ -1,0 +1,14 @@
+<mat-toolbar>
+
+  <div class="toolbar-item" routerLink="/">
+    <button mat-button>
+      <mat-icon>school</mat-icon>
+      <span>{{'Angular Innovate' | uppercase}}</span>
+    </button>
+  </div>
+
+  <div *ngFor="let link of links" class="toolbar-item">
+    <button mat-button [routerLink]="link.url">{{link.text | uppercase}}</button>
+  </div>
+
+</mat-toolbar>
