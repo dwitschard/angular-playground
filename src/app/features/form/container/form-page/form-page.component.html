@@ -9,11 +9,14 @@
        [active]="activeLink == link"
        (click)="activeLink = link"
     >
-    {{link.text}}
+      {{link.text}}
     </a>
   }
 
 </nav>
+
 <mat-tab-nav-panel #tabPanel>
-  <router-outlet></router-outlet>
+  <div class="form-router-outlet">
+    <router-outlet></router-outlet>
+  </div>
 </mat-tab-nav-panel>

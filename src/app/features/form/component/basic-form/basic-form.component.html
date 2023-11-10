@@ -1,1 +1,51 @@
-<p>basic-form works!</p>
+<h3>Enter your Details</h3>
+
+<div class="form-container">
+
+  <form [formGroup]="form" (ngSubmit)="submitForm(formDirective)" #formDirective="ngForm">
+    <h4>Form</h4>
+
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input formControlName="firstName" matInput placeholder="Placeholder">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input formControlName="lastName" matInput placeholder="Placeholder">
+    </mat-form-field>
+
+    <button mat-stroked-button color="primary">Submit Form</button>
+  </form>
+
+  <div>
+
+    <button #showDataBtn mat-stroked-button (click)="showData.set(!showData())">
+      @if( showData() ) {
+        Hide Data
+      } @else {
+        Show Data
+      }
+    </button>
+
+    <div>
+
+      @defer ( on hover(showDataBtn) )  {
+
+        @if( showData() ) {
+
+          @for( element of data(); track element.firstName ) {
+            <app-form-data-viewer [data]="element"></app-form-data-viewer>
+          } @empty {
+            <div>No data entered yet!</div>
+          }
+
+        }
+
+      }
+
+    </div>
+
+  </div>
+
+</div>

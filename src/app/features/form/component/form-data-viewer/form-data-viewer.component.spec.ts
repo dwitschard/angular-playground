@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReactiveFormComponent } from './reactive-form.component';
+import { FormDataViewerComponent } from './form-data-viewer.component';
 
-describe('ReactiveFormComponent', () => {
-  let component: ReactiveFormComponent;
-  let fixture: ComponentFixture<ReactiveFormComponent>;
+describe('FormDataViewerComponent', () => {
+  let component: FormDataViewerComponent;
+  let fixture: ComponentFixture<FormDataViewerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormComponent]
+      imports: [FormDataViewerComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ReactiveFormComponent);
+    fixture = TestBed.createComponent(FormDataViewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,15 @@
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+
+}
+
+h4 {
+  margin-top: 0
+}
+
+form {
+  display: grid;
+  max-width: 50vw;
+}

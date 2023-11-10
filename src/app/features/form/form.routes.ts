@@ -1,8 +1,5 @@
 import {Route} from "@angular/router";
 import {FormPageComponent} from "./container/form-page/form-page.component";
-import {BasicFormComponent} from "./component/basic-form/basic-form.component";
-import {ReactiveFormComponent} from "./component/reactive-form/reactive-form.component";
-import {SignalFormComponent} from "./component/signal-form/signal-form.component";
 
 export const FORM_ROUTES: Route[] = [
   {
@@ -16,15 +13,11 @@ export const FORM_ROUTES: Route[] = [
       },
       {
         path: 'basic',
-        component: BasicFormComponent
-      },
-      {
-        path: 'reactive',
-        component: ReactiveFormComponent
+        loadComponent: () => import('./component/basic-form/basic-form.component').then((x) => x.BasicFormComponent)
       },
       {
         path: 'signal',
-        component: SignalFormComponent
+        loadComponent: () => import('./component/signal-form/signal-form.component').then((x) => x.SignalFormComponent)
       }
     ]
   },

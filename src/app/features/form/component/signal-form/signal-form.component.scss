@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.click-area {
+  height: 200px;
+  background-color: lightgray;
+  border: 1px solid gray;
+}

@@ -15,8 +15,7 @@ export class FormPageComponent {
 
   public links: Link[] = [
     {text: 'Basic Form', url: 'basic'},
-    {text: 'Reactive Form', url: 'reactive'},
-    {text: 'Signal Form', url: 'signal'},
+    {text: 'Signals', url: 'signal'},
   ]
 
   public activeLink: Link = this.links[0];
