@@ -4,10 +4,11 @@ import {UserTableComponent} from "../../component/user-table/user-table.componen
 import {RouterOutlet} from "@angular/router";
 import {UserService} from "../../service/user.service";
 import {shareReplay} from "rxjs";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @Component({
   standalone: true,
-  imports: [CommonModule, UserTableComponent, RouterOutlet, AsyncPipe],
+  imports: [CommonModule, UserTableComponent, RouterOutlet, AsyncPipe, MatProgressSpinnerModule],
   template: `
     <h1>Users</h1>
 
@@ -20,7 +21,7 @@ import {shareReplay} from "rxjs";
       <!-- placeholder is shown for a minimum of 500ms -->
       <!-- placeholder is always shown, also when going back and forth with browser navigation -->
 
-      <div>Placeholder</div>
+        <mat-spinner strokeWidth="2" diameter="25" ></mat-spinner>
     }
   `,
   styleUrls: ['./user-page.component.scss']
