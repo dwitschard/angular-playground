@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "surname": "Doe",
+    "zip": "6300",
+    "city": "Zug",
+    "language": "German"
+  },
+  {
+    "id": 2,
+    "firstName": "Jane",
+    "surname": "Smith",
+    "zip": "8001",
+    "city": "Zurich",
+    "language": "German"
+  },
+  {
+    "id": 3,
+    "firstName": "Alice",
+    "surname": "Johnson",
+    "zip": "4051",
+    "city": "Basel",
+    "language": "German"
+  },
+  {
+    "id": 4,
+    "firstName": "Bob",
+    "surname": "Williams",
+    "zip": "1201",
+    "city": "Geneva",
+    "language": "French"
+  },
+  {
+    "id": 5,
+    "firstName": "Charlie",
+    "surname": "Brown",
+    "zip": "6900",
+    "city": "Lugano",
+    "language": "Italian"
+  },
+  {
+    "id": 6,
+    "firstName": "David",
+    "surname": "Jones",
+    "zip": "3001",
+    "city": "Bern",
+    "language": "German"
+  },
+  {
+    "id": 7,
+    "firstName": "Eve",
+    "surname": "Davis",
+    "zip": "6900",
+    "city": "Lugano",
+    "language": "Italian"
+  },
+  {
+    "id": 8,
+    "firstName": "Frank",
+    "surname": "Miller",
+    "zip": "4051",
+    "city": "Basel",
+    "language": "German"
+  },
+  {
+    "id": 9,
+    "firstName": "Grace",
+    "surname": "Wilson",
+    "zip": "1201",
+    "city": "Geneva",
+    "language": "French"
+  },
+  {
+    "id": 10,
+    "firstName": "Harry",
+    "surname": "Moore",
+    "zip": "3001",
+    "city": "Bern",
+    "language": "German"
+  },
+  {
+    "id": 11,
+    "firstName": "Ivy",
+    "surname": "Taylor",
+    "zip": "8001",
+    "city": "Zurich",
+    "language": "German"
+  },
+  {
+    "id": 12,
+    "firstName": "Jack",
+    "surname": "Anderson",
+    "zip": "6300",
+    "city": "Zug",
+    "language": "German"
+  },
+  {
+    "id": 13,
+    "firstName": "Kate",
+    "surname": "Thomas",
+    "zip": "1201",
+    "city": "Geneva",
+    "language": "French"
+  },
+  {
+    "id": 14,
+    "firstName": "Leo",
+    "surname": "Jackson",
+    "zip": "4051",
+    "city": "Basel",
+    "language": "German"
+  },
+  {
+    "id": 15,
+    "firstName": "Mia",
+    "surname": "White",
+    "zip": "3001",
+    "city": "Bern",
+    "language": "German"
+  },
+  {
+    "id": 16,
+    "firstName": "Noah",
+    "surname": "Harris",
+    "zip": "8001",
+    "city": "Zurich",
+    "language": "German"
+  },
+  {
+    "id": 17,
+    "firstName": "Olivia",
+    "surname": "Martin",
+    "zip": "6300",
+    "city": "Zug",
+    "language": "German"
+  },
+  {
+    "id": 18,
+    "firstName": "Peter",
+    "surname": "Thompson",
+    "zip": "6900",
+    "city": "Lugano",
+    "language": "Italian"
+  },
+  {
+    "id": 19,
+    "firstName": "Queen",
+    "surname": "Garcia",
+    "zip": "1201",
+    "city": "Geneva",
+    "language": "French"
+  },
+  {
+    "id": 20,
+    "firstName": "Robert",
+    "surname": "Martinez",
+    "zip": "4051",
+    "city": "Basel",
+    "language": "German"
+  }
+]

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component, Input} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {User} from "../../model/user.model";
+import {EMPTY, Observable} from "rxjs";
 
 @Component({
   selector: 'app-user-table',
@@ -9,5 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./user-table.component.scss']
 })
 export class UserTableComponent {
+
+  @Input({required: true})
+  public userList: User[] | null | undefined = []
 
 }

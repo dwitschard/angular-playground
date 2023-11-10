@@ -1,1 +1,17 @@
-<p>user-table works!</p>
+
+@for(user of userList; track user.id; let count = $count, index = $index, isLastElement = $last) {
+
+  <div>
+    <span>#{{index}}: </span>
+    <span>{{user.firstName}}</span>
+  </div>
+
+  @if(isLastElement == true) {
+    <div>Total of {{count}} Users found!</div>
+  }
+
+  } @empty {
+    <div>Empty List</div>
+  }
+
+
