@@ -13,7 +13,7 @@ export const APP_ROUTES: Route[] = [
   },
   {
     path: 'tech',
-    loadChildren: () => import('./features/tech/technical.routes').then(mod => mod.TECH_ROUTES)
+    loadChildren: () => import('./features/technical/technical.routes').then(mod => mod.TECH_ROUTES)
   },
   {
     path: 'user',
