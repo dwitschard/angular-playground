@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {User} from "../../model/user.model";
-import {EMPTY, Observable} from "rxjs";
 
 @Component({
   selector: 'app-user-table',

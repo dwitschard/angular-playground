@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
 import {HeaderComponent, Link} from "./shared/components/header/header.component";
 import {FooterComponent} from "./shared/components/footer/footer.component";
 

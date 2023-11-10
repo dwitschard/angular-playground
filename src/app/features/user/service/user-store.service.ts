@@ -1,4 +1,4 @@
-import {Injectable, signal, Signal, WritableSignal} from '@angular/core';
+import {Injectable, signal, WritableSignal} from '@angular/core';
 import {User} from "../model/user.model";
 
 @Injectable({
