@@ -10,7 +10,10 @@ import {provideHttpClient} from "@angular/common/http";
 bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(BrowserModule),
-    provideRouter(APP_ROUTES, withViewTransitions({onViewTransitionCreated: (event) => console.log(event)})),
+    provideRouter(
+      APP_ROUTES,
+      withViewTransitions()
+    ),
     provideAnimations(),
     provideHttpClient()
   ]
