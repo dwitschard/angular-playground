@@ -9,7 +9,7 @@ export const TECH_ROUTES: Route[] = [
       {
         path: '',
         pathMatch: "full",
-        redirectTo: 'control-flow'
+        redirectTo: 'signal'
       },
       {
         path: 'control-flow',

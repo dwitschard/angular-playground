@@ -14,8 +14,8 @@ import {filter} from "rxjs";
 export class TechnicalPageComponent {
 
   public links: Link[] = [
-    {text: 'Control Flow', url: 'control-flow'},
     {text: 'Signals', url: 'signal'},
+    {text: 'Control Flow', url: 'control-flow'},
   ]
 
   public activeLink: Link = this.links[0];
