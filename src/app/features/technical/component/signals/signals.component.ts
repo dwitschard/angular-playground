@@ -1,4 +1,4 @@
-import {Component, computed, OnInit, signal} from '@angular/core';
+import {Component, computed, effect, OnInit, signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {fromEvent, map, Observable} from "rxjs";
 import {toSignal} from "@angular/core/rxjs-interop";
@@ -28,6 +28,19 @@ export class SignalsComponent implements OnInit {
     this.counter.update((current) => current + 1)
 
     this.counter()
+  }
+
+  constructor() {
+
+    // Effect-API [Developer Preview]
+    effect(() => {
+      console.log(`The count is: ${this.counter()})`);
+
+      // Use Cases:
+      // 1) Logging displayed data (analytics, debugging)
+      // 2) store the current value of the counter in local storage
+      // 3) DOM-Manipulation that is not possible via template syntax
+    });
 
   }
 
@@ -45,7 +58,7 @@ export class SignalsComponent implements OnInit {
     const windowWidthMiddle = window.innerWidth / 2
 
     const lastClick = this.lastClick()
-      return !!(lastClick && lastClick.x > windowWidthMiddle && lastClick.y < windowHeightMiddle);
+    return !!(lastClick && lastClick.x > windowWidthMiddle && lastClick.y < windowHeightMiddle);
   })
 
   incrementCounter() {
