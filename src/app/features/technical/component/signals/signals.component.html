@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="topLeft">
-    @if( lastClick() ) {
+    @if (lastClick()) {
       <h5>Last Click Information</h5>
 
       <pre>{{ lastClick() | json }}</pre>
@@ -16,7 +16,14 @@
 
   <div class="topRight"></div>
 
-  <div class="bottomLeft"></div>
+  <div class="bottomLeft">
+    <h5>Calculator</h5>
+
+    <pre>> is {{ counter() }} even?</pre>
+    <pre>> {{ isEven() ? 'Yes' : 'No' }}</pre>
+
+    <button mat-stroked-button (click)="incrementCounter()">Increment Counter</button>
+  </div>
 
   <div class="bottomRight"></div>
 
