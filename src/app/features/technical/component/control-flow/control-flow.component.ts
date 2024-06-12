@@ -1,5 +1,5 @@
 import {Component, signal, WritableSignal} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {FormBuilder, FormGroup, FormGroupDirective, ReactiveFormsModule, Validators} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
@@ -33,5 +33,9 @@ export class ControlFlowComponent {
       formDirective.resetForm()
       this.form.reset()
     }
+  }
+
+  randomSuffix(): string {
+    return '_' + Math.random() * 100;
   }
 }

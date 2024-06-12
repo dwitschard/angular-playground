@@ -34,7 +34,7 @@
 
         @if( showData() ) {
 
-          @for( element of data(); track element.firstName ) {
+          @for( element of data(); track element.firstName + randomSuffix() ) {
             <app-form-data-viewer [data]="element"></app-form-data-viewer>
           } @empty {
             <div>No data entered yet!</div>
